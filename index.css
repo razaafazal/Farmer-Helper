@@ -1,0 +1,43 @@
+.carousel-item img{
+    height: 55vh;
+}
+.row featurette img{
+    height:40vh;
+
+}
+.bookbutton {
+    text-align: center;
+    font-size: 12px;
+    background-color: #a0c800;
+    padding: 5px 100px;
+    /* position: absolute;
+    top: 3px;
+    right: 3px; */
+    color: white;
+    border-radius: 3px;
+  }
+
+  .formcontainer{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: #19cb66;
+    padding:25px;
+    
+    
+
+
+  }
+  #myform{
+
+    border: 2px solid black;
+    border-radius: 10px;
+    
+   
+  }
+  .text-center{
+    margin-top: 10px;
+    margin-left: 40%;
+  }

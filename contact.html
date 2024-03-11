@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmer Helper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Farmer Helper</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="/about.html">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" href="/Contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="location.html">Select Location</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Tractor</a></li>
+                  <li><a class="dropdown-item" href="#">Harvester</a></li>
+                  <li><a class="dropdown-item" href="#">Threshing Machine</a></li>
+                  <li><a class="dropdown-item" href="#">Plow</a></li>
+                  <li><a class="dropdown-item" href="#">Cultivator</a></li>
+                  <li><a class="dropdown-item" href="#">Sprayer Machine</a></li>
+                  <li><a class="dropdown-item" href="#">Seed Drill</a></li>
+                </ul>
+              </li>
+              <div id="google_translate_element"></div>
+            
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search Equipment" aria-label="Search ">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+     
+      <div class="container my-4">
+        <h2>Contact Us</h2>
+        <form onsubmit="sendEmail();reset();return false;">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="Name" class="form-control" id="name" aria-describedby="emailHelp">
+            
+          </div>
+            <div class="mb-3">
+              <label for="email" class="form-label" >Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="query" class="form-label">Query</label>
+              <input type="Text" class="form-text" id="query">
+            </div>
+            <div class="mb-3">
+              <label for="mobile" class="form-label">Enter MobileNumber</label>
+              <input type="Number" class="form-control" id="mobile">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+     
+      <script>
+        var stateObject = {
+        "Bihar": { "Purnea": ["Kasba", "Garhbanaili","Jalalgarh","Bishanpur","Sanpa","Begampur"],
+        "Araria": ["Jokihat", "Ranigang","sikati","Palasi","Farbisgang"],
+        "Gopalganj": ["Barauli", "Thawe","Bhorey","Baikunthpur"],
+        "Patna": ["Barh", "Belchhi","Bakhtiarpur","Dhanarua","Maner"],
+        "Katihar": ["Dalan", "Garbhaili","Belwa","Baghar","Madhepura"],
+        },
+        "U.P": {
+        "Agra": ["Bichpuri", "Barauli Ahir","Etmadpur","Dhanauli","Akbarpur","Pinahat"],
+        "Mathura": ["Adampur", "Barahara Bangar","Barsana","Ajijpur","Akbarpur","Bhartiya"],
+        "Aligarh": ["Atrauli", "Garhana","Iglas","Khair"],
+        "Prayagraj": ["Karchhana", "Koraon","Phulpur","Bara","Meja","Manda"],
+        "Bareilly": ["Bebah", "Bhagwanpur Dhimri","Alampur","Babhaia"],
+        "Basti": ["Aamgaon", "Agaee Bhagan","Ahirawli","Akela kuberpura","Akpangi"],
+        "Ayodhya": ["Amsin", "Ankari pur","Ashapur Chandie","Amari"],
+        }, 
+        "West Bangal": {
+        "Bankura": ["Arabanshi", "Baindhka","Barabagan","Banchinga"],
+        "Jalpaiguri": ["Banchinga", "Barabagan"],
+        "Nadia": ["Acadia", "Bighorn"],
+        "Malda": ["Acadia", "Bighorn"],
+        "Howrah": ["Acadia", "Bighorn"],
+        },
+        "Gujrat": { "Delhi": ["new Delhi", "North Delhi"],
+        "Kerala": ["Thiruvananthapuram", "Palakkad"],
+        "Goa": ["North Goa", "South Goa"],
+        },
+        "Jharkhand": { "Delhi": ["new Delhi", "North Delhi"],
+        "Kerala": ["Thiruvananthapuram", "Palakkad"],
+        "Goa": ["North Goa", "South Goa"],
+        },
+        "Punjab": { "Delhi": ["new Delhi", "North Delhi"],
+        "Kerala": ["Thiruvananthapuram", "Palakkad"],
+        "Goa": ["North Goa", "South Goa"],
+        },
+        }
+        window.onload = function () {
+        var countySel = document.getElementById("countySel"),
+        stateSel = document.getElementById("stateSel"),
+        districtSel = document.getElementById("districtSel");
+        for (var country in stateObject) {
+        countySel.options[countySel.options.length] = new Option(country, country);
+        }
+        countySel.onchange = function () {
+        stateSel.length = 1; // remove all options bar first
+        districtSel.length = 1; // remove all options bar first
+        if (this.selectedIndex < 1) return; // done 
+        for (var state in stateObject[this.value]) {
+        stateSel.options[stateSel.options.length] = new Option(state, state);
+        }
+        }
+        countySel.onchange(); // reset in case page is reloaded
+        stateSel.onchange = function () {
+        districtSel.length = 1; // remove all options bar first
+        if (this.selectedIndex < 1) return; // done 
+        var district = stateObject[countySel.value][this.value];
+        for (var i = 0; i < district.length; i++) {
+        districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+        }
+        }
+        }
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+         name=document.getElementById("name").value;
+         email=document.getElementById("email").value;
+        query=document.getElementById("query").value;
+        console.log(query)
+         mobile=document.getElementById("mobile").value;
+
+          Email.send({
+    Host : "smtp.elasticemail.com",
+    
+    Username : "ashish1feb2001@gmail.com",
+    Password : "D0BBAD94ED640A144D2D2118DFE96208091E",
+    To : 'aashuashish62@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body :"Name " + name +"<br/> UserMail " + email+"<br/>Mobile No "+mobile+"<br/> query : "+query
+    }).then(
+     message => alert(message)
+   );
+        }
+      </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>       
+     
+   
