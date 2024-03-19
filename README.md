@@ -5,18 +5,15 @@ Portfolio Template
 To View the live site click (https://ensrlo.000webhostapp.com/))
 
 Features
-Clean, Simple and Modern UI Design.
-
-Uses No CSS or JavaScript Frameworks or libraries as dependencies.
 
 Built with only HTML, CSS and a bit of JavaScript 🔨.
 
-Well Organized Documentation.
-
-Keyboard support.
-
 Fully Responsive.
 
-Loads fast ⚡.
+Clone this repository
+https://github.com/razaafazal/personal-portfolio-aboutme.git
+
+If you don't have Git installed or you don't like using the terminal then you can download the zip and extract that and open the extracted folder in the code editor of your your choice
+
 
 ![zzza](https://github.com/razaafazal/Farmer-Helper/assets/162603506/54f40124-d431-48d1-821e-f563158d416a)
