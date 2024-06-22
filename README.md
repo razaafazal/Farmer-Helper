@@ -9,8 +9,7 @@ https://github.com/razaafazal/Farmer-Helper
 
 If you don't have Git installed or you don't like using the terminal then you can download the zip and extract that and open the extracted folder in the code editor of your your choice
 
-
-![zzza](https://github.com/razaafazal/Farmer-Helper/assets/162603506/54f40124-d431-48d1-821e-f563158d416a)
+![asd](https://github.com/razaafazal/Farmer-Helper/assets/162603506/442b5962-d60f-40a1-9e6a-9c4dc1285233)
 
 ![sss](https://github.com/razaafazal/Farmer-Helper/assets/162603506/24f72f78-535d-4bda-b373-240efaeef178)
 
